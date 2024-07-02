@@ -1,4 +1,11 @@
-function RewardfulPlugin(options: { key: string; jsSrc: string }) {
+function RewardfulPlugin(
+  // useless, but required
+  Vue: any,
+  options: { key: string; jsSrc: string } = {
+    key: '',
+    jsSrc: 'https://r.wdfl.co/rw.js',
+  }
+) {
   // Add rewardful's function to the head
   // As per their documentation, this function should go first
   const script = document.createElement('script');
@@ -10,9 +17,7 @@ function RewardfulPlugin(options: { key: string; jsSrc: string }) {
   const plugin = document.createElement('script');
   plugin.id = 'rewardful-js';
 
-  if (options.jsSrc) plugin.setAttribute('src', options.jsSrc);
-  else plugin.setAttribute('src', 'https://r.wdfl.co/rw.js');
-
+  plugin.setAttribute('src', options.jsSrc);
   plugin.setAttribute('data-rewardful', options.key);
   plugin.async = true;
   document.head.appendChild(plugin);
