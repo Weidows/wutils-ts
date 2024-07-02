@@ -9,7 +9,7 @@ For: https://app.getrewardful.com/
 > https://developers.rewardful.com/javascript-api/overview
 
 ```ts
-import RewardfulPlugin from 'wutils-ts/lib/external/rewardful';
+import RewardfulPlugin from 'wutils-ts/plugins/rewardful';
 
 Vue.use(RewardfulPlugin, {
   key: 'YOUR-API-KEY',
