@@ -22,7 +22,7 @@
   "license": "MIT",
   "author": {
     "name": "Weidows",
-    "email": "Weidows@users.noreply.github.com",
+    "email": "ceo@weidows.tech",
     "url": "https://github.com/Weidows"
   },
   "engines": {
@@ -36,12 +36,16 @@
     "jest",
     "commitizen",
     "semantic-release",
-    "codecov"
+    "codecov",
+    "Rewardful",
+    "Vue",
+    "Affiliate",
+    "Referral"
   ],
   "bugs": {
     "url": "https://github.com/Weidows/wutils-ts/issues"
   },
-  "homepage": "https://github.com/Weidows/wutils-ts#readme",
+  "homepage": "https://github.com/Weidows/wutils-ts",
   "devDependencies": {
     "@types/jest": "^27.5.2",
     "@types/node": "^12.20.11",
