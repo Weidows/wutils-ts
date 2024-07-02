@@ -1,4 +1,4 @@
-import IsDefined from '../../src/utils/common';
+import isDefined from '../../src/utils/common';
 
 describe('common', () => {
   describe('IsDefined', () => {
@@ -6,9 +6,9 @@ describe('common', () => {
       let param;
       const param1 = undefined;
       const param2 = 0;
-      expect(IsDefined(param)).toEqual(false);
-      expect(IsDefined(param1)).toEqual(false);
-      expect(IsDefined(param2)).toEqual(true);
+      expect(isDefined(param)).toEqual(false);
+      expect(isDefined(param1)).toEqual(false);
+      expect(isDefined(param2)).toEqual(true);
     });
   });
 });

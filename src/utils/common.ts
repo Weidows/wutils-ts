@@ -1,5 +1,5 @@
-function IsDefined(params: any): boolean {
+function isDefined(params: any): boolean {
   return typeof params !== 'undefined';
 }
 
-export default IsDefined;
+export default isDefined;
