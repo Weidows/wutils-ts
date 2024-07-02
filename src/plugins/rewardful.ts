@@ -1,7 +1,7 @@
 function RewardfulPlugin(
   // useless, but required
   Vue: any,
-  options: { key: string; jsSrc: string } = {
+  options: { key: string; jsSrc?: string } = {
     key: '',
     jsSrc: 'https://r.wdfl.co/rw.js',
   }
@@ -17,7 +17,7 @@ function RewardfulPlugin(
   const plugin = document.createElement('script');
   plugin.id = 'rewardful-js';
 
-  plugin.setAttribute('src', options.jsSrc);
+  plugin.setAttribute('src', options.jsSrc as string);
   plugin.setAttribute('data-rewardful', options.key);
   plugin.async = true;
   document.head.appendChild(plugin);
