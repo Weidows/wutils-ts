@@ -2,13 +2,15 @@
   "name": "wutils-ts",
   "version": "0.1.0",
   "description": "A template for creating npm packages using TypeScript and VSCode",
-  "main": "./lib/index.js",
+  "main": "./index.js",
   "files": [
-    "lib/**/*"
+    "plugins/**/*",
+    "utils/**/*",
+    "index.*"
   ],
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
-    "clean": "rm -rf ./lib/",
+    "clean": "rm -rf ./plugins/ ./utils/ ./index.*",
     "lint": "eslint ./src/ --fix",
     "semantic-release": "semantic-release",
     "test:watch": "jest --watch",
