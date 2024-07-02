@@ -1,5 +1,5 @@
 function rewardfulInjection(
-  rewardfulKey: string,
+  key: string,
   jsSrc: string = 'https://r.wdfl.co/rw.js'
 ) {
   // Add rewardful's function to the head
@@ -13,11 +13,11 @@ function rewardfulInjection(
   const plugin = document.createElement('script');
   plugin.id = 'rewardful-js';
   plugin.setAttribute('src', jsSrc);
-  plugin.setAttribute('data-rewardful', rewardfulKey);
+  plugin.setAttribute('data-rewardful', key);
   plugin.async = true;
   document.head.appendChild(plugin);
 
   console.log('[Rewardful] pluggin initiated');
 }
 
-export default { rewardfulInjection };
+export default { rewardful: rewardfulInjection };
