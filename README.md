@@ -9,11 +9,11 @@ For: https://app.getrewardful.com/
 > https://developers.rewardful.com/javascript-api/overview
 
 ```ts
-import rewardful from "wutils-ts/lib/external/rewardful";
+import RewardfulPlugin from 'wutils-ts/lib/external/rewardful';
 
-Vue.use(rewardful, {
-  key: 'YOUR-API-KEY'
-  jsSrc: 'https://r.wdfl.co/rw.js'
+Vue.use(RewardfulPlugin, {
+  key: 'YOUR-API-KEY',
+  jsSrc: 'https://r.wdfl.co/rw.js',
 });
 ```
 
