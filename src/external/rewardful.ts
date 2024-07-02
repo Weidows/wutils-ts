@@ -1,7 +1,4 @@
-function RewardfulPlugin(
-  key: string,
-  jsSrc: string = 'https://r.wdfl.co/rw.js'
-) {
+function RewardfulPlugin(options: { key: string; jsSrc: string }) {
   // Add rewardful's function to the head
   // As per their documentation, this function should go first
   const script = document.createElement('script');
@@ -12,8 +9,11 @@ function RewardfulPlugin(
   // Include rewardful's src js to the head
   const plugin = document.createElement('script');
   plugin.id = 'rewardful-js';
-  plugin.setAttribute('src', jsSrc);
-  plugin.setAttribute('data-rewardful', key);
+
+  if (options.jsSrc) plugin.setAttribute('src', options.jsSrc);
+  else plugin.setAttribute('src', 'https://r.wdfl.co/rw.js');
+
+  plugin.setAttribute('data-rewardful', options.key);
   plugin.async = true;
   document.head.appendChild(plugin);
 
