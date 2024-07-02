@@ -1,4 +1,4 @@
-function rewardfulInjection(
+function RewardfulPlugin(
   key: string,
   jsSrc: string = 'https://r.wdfl.co/rw.js'
 ) {
@@ -20,4 +20,4 @@ function rewardfulInjection(
   console.log('[Rewardful] pluggin initiated');
 }
 
-export default { rewardful: rewardfulInjection };
+export { RewardfulPlugin };
